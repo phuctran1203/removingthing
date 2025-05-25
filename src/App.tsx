@@ -4,7 +4,7 @@ import Home from "./Home";
 
 function App() {
   return (
-    <BrowserRouter basename="/linkbridge">
+    <BrowserRouter basename="/LinkBridge">
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
