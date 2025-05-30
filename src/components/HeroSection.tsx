@@ -1,29 +1,33 @@
 import React from "react";
+import { LineShadowText } from "@/components/magicui/line-shadow-text";
+import { Button } from "./ui/button";
 
 export default function HeroSection() {
-  const linkRef = React.useRef<HTMLAnchorElement>(null);
-  React.useEffect(() => {
-    linkRef.current?.click();
-  }, []);
+  // React.useEffect(() => {
+  //   linkRef.current?.click();
+  // }, []);
 
   return (
-    <section className="container mx-auto mt-10">
-      <div className="flex flex-col items-center">
-        <h1>Cái Cầu - Một Kiến Trúc Phồn Hoa</h1>
-        <p>
-          Nằm giữa thành phố đông đúc và tấp nập, cái cầu trở thành một điểm đến
-          không thể thiếu cho những người yêu thích kiến trúc.
-        </p>
+    <section className="relative pt-17 h-screen overflow-hidden">
+      <div className="absolute bottom-0 left-0 -translate-x-2/3 translate-y-2/3 w-1/2 aspect-square bg-primary rounded-full" />
+      <div className="absolute bottom-0 right-0 translate-2/3 w-1/2 aspect-square bg-primary rounded-full" />
 
-        <img
-          className="w-64"
-          src="https://i.pinimg.com/736x/33/86/26/3386260445cf60272605e4ecc4c492f1.jpg"
-          alt="Cái Cầu"
-        />
-        <a ref={linkRef} href="https://www.rotate4all.com/ptp/promote-295710">
-          https://www.rotate4all.com/ptp/promote-295710
-        </a>
+      <div className="flex flex-col items-center">
+        <h1 className="uppercase text-4xl tracking-widest">
+          background remover
+        </h1>
+
+        <div className="flex items-end gap-4">
+          <h1 className="uppercase text-4xl">ultra</h1>
+          <LineShadowText className="uppercase italic text-5xl font-bold">
+            fast
+          </LineShadowText>
+        </div>
+
+        <Button className="mt-5 rounded-full">Subscribe now</Button>
       </div>
+
+      <div className="border aspect-video h-1/2 mx-auto shadow-xl"></div>
     </section>
   );
 }
