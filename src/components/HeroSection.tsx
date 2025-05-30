@@ -1,6 +1,7 @@
 import React from "react";
 import { LineShadowText } from "@/components/magicui/line-shadow-text";
 import { Button } from "./ui/button";
+import { ImgComparisonSlider } from "@img-comparison-slider/react";
 
 export default function HeroSection() {
   // React.useEffect(() => {
@@ -8,7 +9,7 @@ export default function HeroSection() {
   // }, []);
 
   return (
-    <section className="relative pt-17 h-screen overflow-hidden">
+    <section className="pt-17 flex flex-col items-center justify-center gap-10 relative h-screen overflow-hidden">
       <div className="absolute bottom-0 left-0 -translate-x-2/3 translate-y-2/3 w-1/2 aspect-square bg-primary rounded-full" />
       <div className="absolute bottom-0 right-0 translate-2/3 w-1/2 aspect-square bg-primary rounded-full" />
 
@@ -27,7 +28,24 @@ export default function HeroSection() {
         <Button className="mt-5 rounded-full">Subscribe now</Button>
       </div>
 
-      <div className="border aspect-video h-1/2 mx-auto shadow-xl"></div>
+      <div className="aspect-video w-full max-w-140 mx-auto shadow-2xl rounded-2xl overflow-hidden">
+        <ImgComparisonSlider className="size-full">
+          <div slot="first" className="aspect-video">
+            <img
+              src="/media/1.png"
+              alt=""
+              className="size-full object-cover object-center"
+            />
+          </div>
+          <div slot="second" className="aspect-video">
+            <img
+              src="/media/2.png"
+              alt=""
+              className="size-full object-cover object-center"
+            />
+          </div>
+        </ImgComparisonSlider>
+      </div>
     </section>
   );
 }

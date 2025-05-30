@@ -12,30 +12,35 @@ const links = [
 
 export default function Header() {
   return (
-    <header className="absolute top-0 w-full flex p-4">
-      <div className="grow flex items-center gap-6">
-        <div className="h-full">
-          <Logo className="h-full aspect-square" />
+    <header className="absolute top-0 w-full">
+      <div className="container mx-auto flex py-5">
+        <div className="grow flex items-center gap-6">
+          <div className="h-full">
+            <Logo className="h-full aspect-square" />
+          </div>
+          {links.map((link, index) => (
+            <Link
+              key={index}
+              to={link.link}
+              className={cn(buttonVariants({ variant: "ghost" }))}
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
-        {links.map((link, index) => (
-          <Link
-            key={index}
-            to={link.link}
-            className={cn(buttonVariants({ variant: "ghost" }))}
-          >
-            {link.name}
-          </Link>
-        ))}
-      </div>
 
-      <div className="flex items-center gap-4">
-        <span className="text-sm">Free trial?</span>
-        <a
-          href="https://www.rotate4all.com/ptp/promote-295710"
-          className={cn(buttonVariants({ variant: "default" }), "rounded-full")}
-        >
-          Watch ads
-        </a>
+        <div className="flex items-center gap-4">
+          <span className="text-sm">Free trial?</span>
+          <a
+            href="https://www.rotate4all.com/ptp/promote-295710"
+            className={cn(
+              buttonVariants({ variant: "default" }),
+              "rounded-full"
+            )}
+          >
+            Watch ads
+          </a>
+        </div>
       </div>
     </header>
   );
