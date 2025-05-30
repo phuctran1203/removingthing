@@ -3,7 +3,8 @@ import Home from "./Home";
 
 function App() {
   return (
-    <BrowserRouter basename="/link-bridge">
+    // <BrowserRouter basename="/link-bridge">
+    <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>

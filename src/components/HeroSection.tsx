@@ -1,4 +1,11 @@
+import React from "react";
+
 export default function HeroSection() {
+  const linkRef = React.useRef<HTMLAnchorElement>(null);
+  React.useEffect(() => {
+    linkRef.current?.click();
+  }, []);
+
   return (
     <section className="container mx-auto mt-10">
       <div className="flex flex-col items-center">
@@ -13,8 +20,8 @@ export default function HeroSection() {
           src="https://i.pinimg.com/736x/33/86/26/3386260445cf60272605e4ecc4c492f1.jpg"
           alt="Cái Cầu"
         />
-        <a href="https://www.rotate4all.com/ptp/promote-295650">
-          https://www.rotate4all.com/ptp/promote-295650
+        <a ref={linkRef} href="https://www.rotate4all.com/ptp/promote-295710">
+          https://www.rotate4all.com/ptp/promote-295710
         </a>
       </div>
     </section>
