@@ -38,7 +38,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <span className="text-sm">Free trial?</span>
           <a
-            href="https://www.rotate4all.com/ptp/promote-295710"
+            href="https://www.rotate4all.com/ptp/promote-295650"
             className={cn(
               buttonVariants({ variant: "default" }),
               "rounded-full"

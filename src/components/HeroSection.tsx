@@ -1,4 +1,3 @@
-import React from "react";
 import { LineShadowText } from "@/components/magicui/line-shadow-text";
 import { Button } from "./ui/button";
 import { ImgComparisonSlider } from "@img-comparison-slider/react";
