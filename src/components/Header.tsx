@@ -2,6 +2,7 @@ import Logo from "./icons/Logo";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
+import { motion } from "motion/react";
 
 const links = [
   { name: "Home", link: "/" },
@@ -12,7 +13,12 @@ const links = [
 
 export default function Header() {
   return (
-    <header className="absolute top-0 w-full">
+    <motion.header
+      initial={{ y: "-100%" }}
+      animate={{ y: 0 }}
+      transition={{ delay: 1, duration: 0.7 }}
+      className="z-1 absolute top-0 w-full"
+    >
       <div className="container mx-auto flex py-5">
         <div className="grow flex items-center gap-6">
           <div className="h-full">
@@ -42,6 +48,6 @@ export default function Header() {
           </a>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }
