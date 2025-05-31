@@ -7,13 +7,19 @@ import PlusDash from "./icons/PlusDash";
 import { RetroGrid } from "@/components/magicui/retro-grid";
 import { motion } from "motion/react";
 import { TextAnimate } from "./magicui/text-animate";
+import { cn } from "@/lib/utils";
 export default function HeroSection() {
   // React.useEffect(() => {
   //   linkRef.current?.click();
   // }, []);
 
   return (
-    <section className="pt-17 flex flex-col items-center justify-center gap-10 relative h-screen overflow-hidden">
+    <section
+      className={cn(
+        "px-4 pt-17 flex flex-col items-center justify-center gap-10 relative h-screen overflow-hidden",
+        "sm:px-0"
+      )}
+    >
       {/* visual decor */}
       <div className="absolute inset-0 z-0">
         <RetroGrid
@@ -53,7 +59,7 @@ export default function HeroSection() {
       {/* content */}
       <div className="relative flex flex-col items-center">
         <div className="relative">
-          <h1 className="uppercase text-4xl tracking-[0.65rem]">
+          <h1 className="uppercase sm:text-4xl text-xl text-center tracking-[0.4rem] sm:tracking-[0.65rem]">
             <TextAnimate animation="slideLeft" by="character" duration={0.4}>
               background remover
             </TextAnimate>
@@ -80,7 +86,7 @@ export default function HeroSection() {
 
         <div className="flex items-end gap-4">
           <div className="">
-            <h1 className="uppercase text-4xl tracking-[0.65rem]">
+            <h1 className="uppercase text-xl sm:text-4xl tracking-[0.4rem] sm:tracking-[0.65rem]">
               <TextAnimate animation="slideLeft" by="character" delay={0.2}>
                 ultra
               </TextAnimate>
@@ -91,7 +97,7 @@ export default function HeroSection() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.2 }}
           >
-            <LineShadowText className="uppercase italic text-5xl font-bold">
+            <LineShadowText className="uppercase italic text-3xl sm:text-5xl font-bold">
               fast
             </LineShadowText>
           </motion.div>

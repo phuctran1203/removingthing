@@ -19,7 +19,7 @@ export default function Header() {
       transition={{ delay: 1, duration: 0.7 }}
       className="z-1 absolute top-0 w-full"
     >
-      <div className="container mx-auto flex py-5">
+      <div className="mx-auto flex py-5 px-4 sm:px-12">
         <div className="grow flex items-center gap-6">
           <div className="h-full">
             <Logo className="h-full aspect-square" />
@@ -28,7 +28,10 @@ export default function Header() {
             <Link
               key={index}
               to={link.link}
-              className={cn(buttonVariants({ variant: "ghost" }))}
+              className={cn(
+                buttonVariants({ variant: "ghost" }),
+                "hidden sm:block"
+              )}
             >
               {link.name}
             </Link>

@@ -7,6 +7,7 @@ function App() {
     <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/removingthing" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
