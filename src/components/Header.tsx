@@ -13,10 +13,10 @@ const links = [
 
 export default function Header() {
   return (
-    <motion.header
-      initial={{ y: "-100%" }}
-      animate={{ y: 0 }}
-      transition={{ delay: 1, duration: 0.7 }}
+    <header
+      // initial={{ y: "-100%" }}
+      // animate={{ y: 0 }}
+      // transition={{ delay: 1, duration: 0.7 }}
       className="z-1 absolute top-0 w-full"
     >
       <div className="mx-auto flex py-5 px-4 sm:px-12">
@@ -51,6 +51,6 @@ export default function Header() {
           </a>
         </div>
       </div>
-    </motion.header>
+    </header>
   );
 }
