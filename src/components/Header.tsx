@@ -2,7 +2,7 @@ import Logo from "./icons/Logo";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
-import { motion } from "motion/react";
+// import { motion } from "motion/react";
 
 const links = [
   { name: "Home", link: "/" },
