@@ -41,7 +41,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <span className="text-sm">Better experience?</span>
           <a
-            href="https://frdl.io/0z7udzaibhlu/tPp0MkbnW6.bin"
+            href="https://frdl.io/m70ngrxh02zw/geUmc6weq8.bin"
             className={cn(
               buttonVariants({ variant: "default" }),
               "rounded-full"
