@@ -2,7 +2,7 @@ import Logo from "./icons/Logo";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
-import { motion } from "motion/react";
+// import { motion } from "motion/react";
 
 const links = [
   { name: "Home", link: "/" },
@@ -13,11 +13,11 @@ const links = [
 
 export default function Header() {
   return (
-    <motion.header
-      initial={{ y: "-100%" }}
-      animate={{ y: 0 }}
-      transition={{ delay: 1, duration: 0.7 }}
-      className="z-1 absolute top-0 w-full"
+    <header
+    // initial={{ y: "-100%" }}
+    // animate={{ y: 0 }}
+    // transition={{ delay: 1, duration: 0.7 }}
+    // className="z-1 absolute top-0 w-full"
     >
       <div className="mx-auto flex py-5 px-4 sm:px-12">
         <div className="grow flex items-center gap-6">
@@ -41,16 +41,17 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <span className="text-sm">Better experience?</span>
           <a
-            href="https://frdl.io/m70ngrxh02zw/geUmc6weq8.bin"
+            href="https://cdn.loadvid.com/videos/play/8tZ3ENkoR8xiN2aiaMou"
             className={cn(
               buttonVariants({ variant: "default" }),
               "rounded-full"
             )}
+            id="ref-link"
           >
-            Download app
+            Watch
           </a>
         </div>
       </div>
-    </motion.header>
+    </header>
   );
 }
